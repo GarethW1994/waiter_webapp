@@ -1,0 +1,39 @@
+html,body {
+    margin:0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.jumbotron {
+    color: #fff;
+    font-weight: 700;
+    font-family: sans-serif;
+    text-shadow: .5px .5px .5px grey;
+    width: 100%;
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/images/waiter-main-banner.jpg");
+    background-size: cover;
+}
+
+.panel {
+    margin: 0;
+}
+
+.container {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.login-Container {
+    margin: 0;
+    padding: 0;
+    height: 300px;
+    width: 50%;
+}
