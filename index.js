@@ -139,7 +139,7 @@ app.post('/login', function(req, res, next) {
 			
 					console.log(true);
 					
-					//res.redirect('signup/');
+					//res.redirect('signup////');
 				} else {
 					
 					console.log(false);
