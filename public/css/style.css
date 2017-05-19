@@ -5,20 +5,6 @@ html,body {
     width: 100%;
 }
 
-.jumbotron {
-    color: #fff;
-    font-weight: 700;
-    font-family: sans-serif;
-    text-shadow: .5px .5px .5px grey;
-    width: 100%;
-    display: block;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    background-image: url("/images/waiter-main-banner.jpg");
-    background-size: cover;
-}
-
 .panel {
     margin: 0;
 }
@@ -26,6 +12,7 @@ html,body {
 .container {
     margin: 0;
     width: 100%;
+	height: 50%;
     display: flex;
     align-items: center;
     justify-content:center;
@@ -35,5 +22,17 @@ html,body {
     margin: 0;
     padding: 0;
     height: 300px;
-    width: 50%;
+    width: 60%;
+	text-align: center;
+}
+
+.form-inline, .form-horizontal {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.btn {
+	margin: 5px 10px;
 }
