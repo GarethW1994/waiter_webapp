@@ -226,6 +226,9 @@ app.get('/login', function(req, res) {
 	res.render('login');
 })
 
+
+var filterData = require('./public/javascript/waiter');
+
 app.get('/days/:user', function(req, res) {
 	waiters.find({}, function(err, data) {
 		if (err) return err;
@@ -233,6 +236,8 @@ app.get('/days/:user', function(req, res) {
 		//var waiterData = data;
 		
 	}).then(function(waiterData) {
+		
+		console.log(filterData(waiterData));
 		
 		res.render('adminPanel', {data: waiterData, days: waiterData[0].waiter_days});
 	});
