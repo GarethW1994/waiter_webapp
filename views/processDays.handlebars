@@ -1,19 +1,20 @@
 <div class="container">
-    <div class="login-Container">
+
+	<div class="login-Container">
 		
 		<span class="label label-success">Welcome, {{username}}</span>
         
 		<h3>Select Days You Can Work:</h3>
 		
 		
-        <form class="form-inline" method="post" action="login/{{username}}">
+        <form class="form-inline" method="post" action="/update/{{username}}">
         
 			<div class="form-group">
             
 				{{#each days}}
                 	<div class="checkbox">
                 		<label>
-                    		<input type="checkbox" value="{{this}}" name="day">{{this}}
+                    		<input type="checkbox" name="days" value="{{this}}" name="day">{{this}}
 						</label>
             		</div>
             	{{/each}}
