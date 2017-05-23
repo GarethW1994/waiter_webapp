@@ -6,6 +6,9 @@ var expressHandlebars = require('express-handlebars');
 var mongoose = require('mongoose');
 var assert = require('assert');
 var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
+var flash = require('express-flash');
+var session = require('express-session');
 
 //declare PORT var 3000
 var port = process.env.PORT || 5000;
@@ -23,6 +26,14 @@ app.set('view engine', 'handlebars');
 //init body parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+
+//flash messages
+app.use(cookieParser('keyboard cat'));
+app.use(cookieParser('secretString'));
+app.use(session({cookie: {maxAge: 60000}}));
+app.use(session());
+app.use(flash());
+app.use(cookieParser());
 
 
 //declare url to mongodb
@@ -92,6 +103,19 @@ adminSchema.index({admin_password: 1}, {unique: true});
 //Create mongoose model
 var waiters = mongoose.model('waiters', waiterSchema);
 var admin = mongoose.model('admin', adminSchema);
+
+//flash middleware
+app.use(function(req, res, next) {
+	res.locals.flash = req.flash();
+
+	next();
+});
+
+//home route
+app.get('/', function(req, res) {
+	res.render('login');
+	req.flash('success', "Welcome");
+});
 
 
 //get login for users
@@ -237,7 +261,7 @@ app.get('/days/:user', function(req, res) {
 		
 	}).then(function(waiterData) {
 		
-		console.log(filterData(waiterData));
+	//	console.log(filterData(waiterData));
 		
 		res.render('adminPanel', {data: waiterData, days: waiterData[0].waiter_days});
 	});
