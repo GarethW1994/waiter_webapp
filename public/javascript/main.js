@@ -17,7 +17,6 @@ module.exports = function main(getDays, panel) {
 		newDayMap = {
 			day: x
 		}
-	
 	}
 	
 		return newDayMap;
