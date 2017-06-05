@@ -1,18 +1,34 @@
+<ul class="weekPanel">
+
+	<li>Sunday <span class="badge">4</span></li>
+	<li>Monday</li>
+	<li>Tuesday</li>
+	<li>Wednesday</li>
+	<li>Thursday</li>
+	<li>Friday</li>
+	<li>Saturday</li>
+</ul>
+
 <table class="table">
   	<tr>
-		<th>ID</th>
 		<th>Name</th>
 		<th>Surname</th>
 		<th>Days Available</th>
 	</tr>
 	
-{{#each data}}
 	<tr>
-		<td>{{_id}}</td>
+{{#each data}}
 		<td>{{waiter_name}}</td>
 		<td>{{waiter_surname}}</td>
-		<td>{{waiter_days}}</td>
-{{/each}}
-		
+{{/each}}	
+		<td>
+			<ul>
+			{{#days}}
+				<li>{{this}}</li>
+			</span>
+			{{/days}}
+			</ul>
+		</td>
 	</tr>
+
 </table>

@@ -1,11 +1,11 @@
+{{> user}}
 <div class="container">
-
 	<div class="login-Container">
 		
 		<span class="label label-success">Welcome, {{username}}</span>
         
 		<h3>Select Days You Can Work:</h3>
-		
+		<h6>(Please select more than one day)</h6>
 		
         <form class="form-inline" method="post" action="/update/{{username}}">
         
@@ -21,12 +21,20 @@
 				
             </div>
 			
-			<br/>
-			
+	
 			<input type="submit" class="btn btn-primary" value="Update">
         </form>
-		
-		
-		
     </div>
+	<br/>
 </div>
+
+	<div class="currentDays">
+			<table class="table">
+				<th>Current Selected Days: </th>
+					{{#each current}}
+				<tr>
+					<td>{{this}}</td>
+				</tr>
+					{{/each}}
+			</table>
+		</div>
