@@ -16,19 +16,18 @@
 		<th>Days Available</th>
 	</tr>
 	
-	<tr>
 {{#each data}}
+	<tr>
 		<td>{{waiter_name}}</td>
 		<td>{{waiter_surname}}</td>
-{{/each}}	
 		<td>
 			<ul>
-			{{#days}}
-				<li>{{this}}</li>
+				<li>{{waiter_days}}</li>
 			</span>
-			{{/days}}
+		
 			</ul>
 		</td>
 	</tr>
+{{/each}}	
 
 </table>

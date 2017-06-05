@@ -10,13 +10,10 @@ module.exports = function main(getDays, panel) {
 		dayMap[splitDays[i]] += 1;
 	}
 	
-	var newDayMap = {};
+	var newDayMap = {day: ""};
 	
 	for (x in dayMap) {
 		
-		newDayMap = {
-			day: x
-		}
 	}
 	
 		return newDayMap;

@@ -61,7 +61,8 @@ app.get('/login/:username', routes.loggedIn);
 //POST ROUTES
 app.post('/login', routes.userLogin);
 
-//app.post('/sign-up', //routes.newUser//) 
+app.post('/sign-up', routes.newUser); 
+
 app.post('/update/:username', routes.updateDays);
 
 app.get('/days/:user', routes.adminDashboard);

@@ -96,7 +96,22 @@ module.exports = function (waiters, admin) {
 
 	///////SAVE DATA ROUTES/////////
 	//save new user 
-
+	const newUser = function(req, res, next) {
+		var userName = req.body.username;
+		var name = req.body.name;
+		var surname = req.body.surname;
+		var password = req.body.password;
+		
+		waiters({
+			waiter_username: userName,
+			waiter_name: name,
+			waiter_surname: surname,
+			waiter_password: password,
+		}).save(function(result) {
+			console.log(result);
+			res.redirect('login');
+		});
+	}
 	//save waiter days
 	const updateDays = function (req, res, next) {
 		//get the users days
@@ -134,6 +149,7 @@ module.exports = function (waiters, admin) {
 		loggedIn,
 		adminDashboard,
 		//post routes
+		newUser,
 		userLogin,
 		updateDays
 	}
