@@ -1,7 +1,7 @@
 'use strict';
 
 //require main.js
-var main = require('../public/javascript/main');
+var main = require('../main');
 
 module.exports = function (waiters, admin) {
 	//declare days
