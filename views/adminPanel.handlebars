@@ -1,13 +1,20 @@
-<ul class="weekPanel">
+{{> adminNav}}
 
-	<li>Sunday <span class="badge">4</span></li>
-	<li>Monday</li>
-	<li>Tuesday</li>
-	<li>Wednesday</li>
-	<li>Thursday</li>
-	<li>Friday</li>
-	<li>Saturday</li>
-</ul>
+<div class="weekPanel">
+	<ul class="weekList">
+{{#each week}}
+		<li class="{{status}}"><h6>{{day}}</h6>
+		<span class="badge">{{number}}</span>
+		</li>
+{{/each}}
+	</ul>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+	  <h3>List Of Waiters</h3>
+  </div>
+</div>
 
 <table class="table">
   	<tr>
@@ -22,9 +29,9 @@
 		<td>{{waiter_surname}}</td>
 		<td>
 			<ul>
-				<li>{{waiter_days}}</li>
-			</span>
-		
+				{{#waiter_days}}
+				<li>{{this}}</li>
+				{{/waiter_days}}
 			</ul>
 		</td>
 	</tr>

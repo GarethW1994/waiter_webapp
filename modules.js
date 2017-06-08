@@ -24,7 +24,7 @@ const waiterData = function() {
 		},
 
 		waiter_days: {
-			type: String
+			type: Object
 		}
 	});
 

@@ -7,6 +7,7 @@ html,body {
 
 .panel {
     margin: 0;
+	text-align: center;
 }
 
 .container {
@@ -35,4 +36,47 @@ html,body {
 
 .btn {
 	margin: 5px 10px;
+}
+
+.green {
+	background-color: #2ebd59;
+}
+
+.orange {
+	background-color: #FFA419;
+}
+
+.red {
+	background-color: #ff0000;
+}
+
+.weekPanel {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	height: auto;
+	width: 100%;
+	margin: 10px 0;
+}
+.weekList >li {
+	display: inline-block;
+    width: 150px;
+    height: 70px;
+    text-align: center;
+    border: 0.1px solid rgba(225,211,247, 0.7);
+    justify-content: center;
+    padding: 10px 0;
+    margin: 10px 10px 0px 0px;
+    box-shadow: 1px 1px 1px grey;
+    font-family: sans;
+    font-size: 13px;
+}
+
+.day {
+	position: relative;
+	border: 1px solid;
+}
+
+.badge {
+	margin: 0;
 }

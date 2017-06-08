@@ -36,15 +36,21 @@ module.exports = function (waiters, admin) {
 			};
 		}).then(function (waiters) {
 			//call main function
+			let list = []; 
+			var dayMap = {}
+				
+			for (var i = 0; i < waiters.length; i++) {
+				list.push(waiters[i].waiter_days);
+			}
 			
-			var d = daysProcess(waiters[0].waiter_days);
-			
-			console.log(d);
+			var weekUpdate = daysProcess(list);
+				
 			
 			res.render('adminPanel', {
-				data: waiters
+				data: waiters,
+				week: weekUpdate
 			});
-		});
+			});
 	}
 
 	//////////POST DATA ROUTES/////////
@@ -112,6 +118,7 @@ module.exports = function (waiters, admin) {
 			res.redirect('login');
 		});
 	}
+	
 	//save waiter days
 	const updateDays = function (req, res, next) {
 		//get the users days
