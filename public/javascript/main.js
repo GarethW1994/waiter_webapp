@@ -45,8 +45,5 @@ module.exports = function main(getDays, panel) {
 		}
 	}
 	
-	
-	console.log(weekReport);
-	
 	return weekReport;
 }
