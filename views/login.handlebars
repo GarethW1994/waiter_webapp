@@ -1,26 +1,25 @@
 {{> defaultNav}}
 
 <div class="container">
-    <div class="login-Container">
-        <h3>Login</h3>
-        <form class="form-inline" method="post" action="login">
-            <div class="form-group">
-            <label for="exampleInputName2">Username: </label>
-                <input type="text" class="form-control" id="username" placeholder="enter username" name="username">
-              
-           
-			
-			 
-            <label for="exampleInputName2">Password: </label>
-                <input type="password" class="form-control" id="password" placeholder="enter password" name="password">
-               
+	<div class="form-container">
+		<h3 id="heading">Login</h3>
+		<form class="form-inline" method="post" action="login">
+			<div class="form-group">
+			<div class="row">
+				<label for="exampleInputName2">Username: </label>
+				<input type="text" class="form-control" id="username" placeholder="enter username" name="username">
+			</div>
+
+			<div class="row">
+				<label for="exampleInputName2">Password: </label>
+				<input type="password" class="form-control" id="password" placeholder="enter password" name="password">
+			</div>
 				
+			<div class="row">
 				<input type="submit" class="btn btn-primary" id="login-button" value="Login">
-            </div>
-    </form>
-</div>
-	
-</div>
+			</div>
+			</div>
+		</form>
+	</div>
 
-
-	
+</div>
