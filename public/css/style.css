@@ -9,7 +9,7 @@ html,body {
     margin: 0;
 	text-align: center;
 	padding: 0;
-	height: 80px;
+	height: 90px;
 	position: relative;
 }
 
@@ -32,6 +32,9 @@ html,body {
 .row {
 	width: 100%;
 	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #login-button {
@@ -91,10 +94,6 @@ html,body {
 	justify-content: center;
 }
 
-
-.btn {
-	margin: 5px 10px;
-}
 
 .green {
 	background-color: #2ebd59;
@@ -160,4 +159,8 @@ ul li {
 	height: 30px;
 	background-image: url('../images/github.png');
 	background-size: cover;
+}
+
+table th, table tr td {
+	text-align: center;
 }

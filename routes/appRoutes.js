@@ -9,7 +9,7 @@ module.exports = function (waiters, admin) {
 
 	/////////GET ROUTES//////////////
 	const index = function (req, res) {
-		res.render('login');
+		res.render('home');
 	}
 
 	const login = function (req, res) {
@@ -148,6 +148,17 @@ module.exports = function (waiters, admin) {
 		return dayMap;
 	}
 
+	//reset data (Delete users)
+	const resetData = function(req, res) {
+		waiters.remove(function(err, result) {
+			if (err) return (err);
+			
+			console.log(result);
+		}).then(function() {
+			res.redirect('/days/Admin');
+		});	
+	}
+	
 	return {
 		//get routes
 		index,
@@ -155,6 +166,7 @@ module.exports = function (waiters, admin) {
 		signUp,
 		loggedIn,
 		adminDashboard,
+		resetData,
 		//post routes
 		newUser,
 		userLogin,

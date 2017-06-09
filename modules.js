@@ -1,69 +1,82 @@
 //require mongoose
 var mongoose = require('mongoose');
+var assert = require('assert');
 
 module.exports = function () {
 
-const waiterData = function() {
-	const waiterSchema = new mongoose.Schema({
-		waiter_username: {
-			type: String,
-			required: true
-		},
+	const waiterData = function () {
+		const waiterSchema = new mongoose.Schema({
+			waiter_username: {
+				type: String,
+				required: true
+			},
 
-		waiter_name: {
-			type: String,
-		},
+			waiter_name: {
+				type: String,
+			},
 
-		waiter_surname: {
-			type: String,
-		},
+			waiter_surname: {
+				type: String,
+			},
 
-		waiter_password: {
-			type: String,
-			required: true
-		},
+			waiter_password: {
+				type: String,
+				required: true
+			},
 
-		waiter_days: {
-			type: Object
-		}
-	});
+			waiter_days: {
+				type: Object
+			}
+		});
 
-	//declare the unique values
-	waiterSchema.index({waiter_username: 1}, {unique: true});
+		//declare the unique values
+		waiterSchema.index({
+			waiter_username: 1
+		}, {
+			unique: true
+		});
 
-	var waiters = mongoose.model('waiters', waiterSchema);
-	
-	return waiters;
-}
+		var waiters = mongoose.model('waiters', waiterSchema);
 
-const adminData = function() {
-	const adminSchema = new mongoose.Schema({
-		admin_username: {
-			type: String,
-			required: true
-		},
+		return waiters;
+	}
 
-		admin_name: {
-			type: String
-		},
+	const adminData = function () {
+		const adminSchema = new mongoose.Schema({
+			admin_username: {
+				type: String,
+				required: true
+			},
 
-		admin_surname: {
-			type: String
-		},
+			admin_name: {
+				type: String
+			},
 
-		admin_password: {
-			type: String,
-			required: true
-		}
+			admin_surname: {
+				type: String
+			},
 
-	})
-	
-	adminSchema.index({admin_surname: 1}, {unique: true});
+			admin_password: {
+				type: String,
+				required: true
+			}
 
-	var admin = mongoose.model('admin', adminSchema);
+		})
 
-	return admin;
-}
+		adminSchema.index({
+			admin_surname: 1
+		}, {
+			unique: true
+		});
+
+		var admin = mongoose.model('admin', adminSchema);
+
+		return admin;
+	}
+
+	// Use native promises
+	mongoose.Promise = global.Promise;
+//	assert.ok(promise instanceof require('mpromise'));
 
 	return {
 		waiterData,

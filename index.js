@@ -49,6 +49,9 @@ app.get('/sign-up', routes.signUp);
 //get login for users
 app.get('/login/:username', routes.loggedIn);
 
+//reset data
+app.get('/admin/resetData', routes.resetData);
+
 ////////////////////////POST ROUTES///////////////////
 app.post('/login', routes.userLogin);
 

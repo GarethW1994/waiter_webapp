@@ -1,28 +1,36 @@
 {{> user}}
-<div class="container">
-	<div class="login-Container">
+<div class="loginContainer">
+	<div class="login-container">
+		<div class="row">
+			<h3><span class="label label-success">Welcome, {{username}}</span></h3>
+		</div>
 
-		<span class="label label-success">Welcome, {{username}}</span>
-
-		<h3>Select Days You Can Work:</h3>
-		<h6>(Please select more than one day)</h6>
+		<div class="row">
+			<h3>Select Days You Can Work:</h3>
+		</div>
+		<div class="row">
+			<h6>(Please select more than one day)</h6>
+		</div>
 
 		<form class="form-inline" method="post" action="/update/{{username}}">
 
-			<div class="form-group">
+			<div class="row">
+				<div class="form-group">
 
-				{{#each days}}
-				<div class="checkbox">
-					<label>
+					{{#each days}}
+					<div class="checkbox">
+						<label>
                     		<input type="checkbox" name="days" value="{{this}}" name="day">{{this}}
 						</label>
+					</div>
+					{{/each}}
+
 				</div>
-				{{/each}}
 
 			</div>
-
-
+		<div class="row">
 			<input type="submit" class="btn btn-primary" value="Update">
+		</div>
 		</form>
 	</div>
 	<br/>
