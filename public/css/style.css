@@ -164,3 +164,7 @@ ul li {
 table th, table tr td {
 	text-align: center;
 }
+
+#important {
+	color: red;
+}

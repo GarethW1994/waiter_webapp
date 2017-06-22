@@ -40,7 +40,9 @@ module.exports = function (waiters, admin) {
 			var dayMap = {}
 				
 			for (var i = 0; i < waiters.length; i++) {
-				list.push(waiters[i].waiter_days);
+				if (waiters[i].waiter_days !== undefined) {
+					list.push(waiters[i].waiter_days);
+				} 
 			}
 			
 			var weekUpdate = daysProcess(list);
@@ -114,8 +116,11 @@ module.exports = function (waiters, admin) {
 			waiter_surname: surname,
 			waiter_password: password,
 		}).save(function(result) {
-			console.log(result);
-			res.redirect('login');
+			if (result.message == 'waiters validation failed') {
+				res.redirect('sign-up');
+			} else {
+				res.redirect('login')	
+			};
 		});
 	}
 	

@@ -4,6 +4,9 @@ var assert = require('assert');
 
 module.exports = function () {
 
+	// Use native promises
+	mongoose.Promise = global.Promise;
+
 	const waiterData = function () {
 		const waiterSchema = new mongoose.Schema({
 			waiter_username: {
@@ -73,10 +76,6 @@ module.exports = function () {
 
 		return admin;
 	}
-
-	// Use native promises
-	mongoose.Promise = global.Promise;
-//	assert.ok(promise instanceof require('mpromise'));
 
 	return {
 		waiterData,

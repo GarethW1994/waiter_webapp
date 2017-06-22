@@ -9,9 +9,12 @@
 </div>
 		<form class="form-horizontal" method="post" action="sign-up">
 			<div class="form-group">
-
 			<div class="row">
-				<label for="exampleInputName2">Name: </label>
+				<p>Fields marked with the <span id="important">*</span> symbol are important fields.</p>
+			</div>
+			
+			<div class="row">
+				<label for="exampleInputName2"><span id="important"> * </span> Name: </label>
 			</div>
 				
 			<div class="row">
@@ -27,8 +30,9 @@
 				<input type="text" class="form-control" id="surname" placeholder="enter surname" name="surname">
 			</div>
 				
-			<div class="row">	
-				<label for="exampleInputName2">Username: </label>
+			<div class="row">
+				
+				<label for="exampleInputName2"><span id="important"> * </span> Username: </label>
 			</div>
 			
 			<div class="row">	
@@ -36,7 +40,7 @@
 			</div>
 				
 			<div class="row">	
-				<label for="exampleInputName2">Password: </label>
+				<label for="exampleInputName2"> <span id="important"> * </span> Password: </label>
 			</div>
 			
 			<div class="row">	
@@ -46,6 +50,7 @@
 			<div class="row">	
 				<input type="submit" class="btn btn-primary" id="login-button" value="Sign Up">
 			</div>
+				<span id="errorMess"> Checking..</span>
 			</div>
 		</form>
 	</div>
