@@ -116,11 +116,9 @@ module.exports = function (waiters, admin) {
 			waiter_surname: surname,
 			waiter_password: password,
 		}).save(function(result) {
-			if (result.message == 'waiters validation failed') {
-				res.redirect('sign-up');
-			} else {
-				res.redirect('login')	
-			};
+			console.log(result);
+			
+			res.redirect('/login');
 		});
 	}
 	
