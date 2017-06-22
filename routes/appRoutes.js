@@ -75,7 +75,7 @@ module.exports = function (waiters, admin) {
 				//that of the database
 				if (username === admin[0].admin_username && password === admin[0].admin_password) {
 					//redirect to logged route
-					res.redirect('days/' + username);
+					res.redirect('/days/' + username);
 				} else {
 					return 'wrong user name or password';
 				}
@@ -94,7 +94,7 @@ module.exports = function (waiters, admin) {
 				//that of the database
 				if (username === user[0].waiter_username && password === user[0].waiter_password) {
 					//redirect to logged route
-					res.redirect('login/' + username);
+					res.redirect('/login/' + username);
 				} else {
 					return 'wrong user name or password';
 				}
