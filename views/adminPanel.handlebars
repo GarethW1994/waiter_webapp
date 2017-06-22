@@ -10,11 +10,9 @@
 	</ul>
 </div>
 
-<div class="panel panel-default">
-  <div class="panel-body">
+<div class="panel panel-default panelDays">
 	  <h3>List Of Waiters</h3>
-  </div>
-</div>
+  <div class="panel-body">
 
 <table class="table">
   	<tr>
@@ -30,7 +28,7 @@
 		<td>
 			<ul>
 				{{#waiter_days}}
-				<li>{{this}}</li>
+				<li class="daysList">{{this}}</li>
 				{{/waiter_days}}
 			</ul>
 		</td>
@@ -38,3 +36,5 @@
 {{/each}}	
 
 </table>
+  </div>
+</div>

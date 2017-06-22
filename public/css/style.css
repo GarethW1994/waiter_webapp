@@ -63,18 +63,23 @@ html,body {
 }
 
 #username, #password {
-	margin: 5px 0 0 5px;
-	
+	margin: 5px 0 0 5px;	
+}
+
+#heading a {
+	text-decoration: none;
 }
 
 @media (max-width: 600px) {
 	.form-container {
-		width: 90%;
-		height: 90%;
+		width: 98%;
+		height: 98%;
 	}
+	
 	.container {
 		height: 80%;
 	}
+	
 	.panel {
 		height: 110px;
 	}
@@ -162,9 +167,24 @@ ul li {
 }
 
 table th, table tr td {
-	text-align: center;
+	text-align: justify;
 }
 
+.table {
+	position: relative;
+	margin: 0px;
+	width: 100%;
+}
 #important {
 	color: red;
+}
+
+.daysList {
+	display: block;
+	text-align: justify;
+}
+
+.panelDays {
+	height: auto;
+	margin: 10px;
 }

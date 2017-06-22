@@ -7,19 +7,29 @@ var username = document.getElementById('username');
 var password = document.getElementById('password');
 
 //sign-up form error messages
-var errorMsg = document.getElementById('errorMess');
+var errorMsgSignUp = document.getElementById('errorMessSignUp');
 
+
+//three loading dots
+var dotOne = document.querySelector('.dot1');
+
+userName.addEventListener('change', function() {
+	dotOne.classList.add('active');
+});
 
 signUpForm.addEventListener('change', function() {
+	
 	var signupValues = [{
 		userName: userName.value,
 		userSurname: userSurname.value,
 		username: username.value,
 		password: password.value
-		errorMsg: errorMsg
 	}];
 	
 	//call validation function
 	//pass in validation parameters
-	validations(signupValues)
+	var inputs = validations(signupValues).validInputs();
+	
+	//display outputs from validation functions
+	errorMsgSignUp.innerText = inputs; 
 });
