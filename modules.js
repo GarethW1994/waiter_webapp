@@ -5,7 +5,7 @@ var assert = require('assert');
 module.exports = function () {
 
 	// Use native promises
-	mongoose.Promise = global.Promise;
+//	mongoose.Promise = global.Promise;
 
 	const waiterData = function () {
 		const waiterSchema = new mongoose.Schema({
