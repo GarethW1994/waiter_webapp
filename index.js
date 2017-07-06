@@ -7,6 +7,18 @@ var expressHandlebars = require('express-handlebars');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 
+//Initialise Instance of express
+var app = express();
+
+//init Handlebars
+app.engine('handlebars', expressHandlebars({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
+//init body parser
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+//Stacic Files
+app.use(express.static('public'));
+
 //declare url to mongodb
 const mongoURL = process.env.MONGO_DB_URL || "mongodb://Gareth:$gareth@ds147551.mlab.com:47551/waiter_app";
 
@@ -25,17 +37,6 @@ var adminSchema = models().adminData;
 //call routes function
 var routes = appRoutes(waiterSchema(), adminSchema());
 
-//Initialise Instance of express
-var app = express();
-
-//init Handlebars
-app.engine('handlebars', expressHandlebars({defaultLayout: 'main'}));
-app.set('view engine', 'handlebars');
-//init body parser
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
-//Stacic Files
-app.use(express.static('public'));
 
 ////////////////////GET ROUTES///////////////////////////
 app.get('/', routes.index);
