@@ -1,5 +1,4 @@
 <h1>Waiter Web App</h1>
-<hr/>
 
 <p>Your sister is running a coffee shop in town, she needs a web application to help her schedule weekly waiter shifts.</p>
 
