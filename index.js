@@ -7,6 +7,9 @@ var expressHandlebars = require('express-handlebars');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 
+//declare url to mongodb
+const mongoURL = process.env.MONGO_DB_URL || "mongodb://Gareth:$gareth@ds147551.mlab.com:47551/waiter_app";
+
 //Initialise Instance of express
 var app = express();
 
@@ -19,8 +22,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 //Stacic Files
 app.use(express.static('public'));
 
-//declare url to mongodb
-const mongoURL = process.env.MONGO_DB_URL || "mongodb://Gareth:$gareth@ds147551.mlab.com:47551/waiter_app";
 
 //call external function
 var databaseConnection = require('./connectDatabase');
