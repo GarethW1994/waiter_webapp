@@ -19,5 +19,5 @@
 
 <p>She need 3 waiters for each day. Days for which there are enough waiters should be marked as green, days for which more waiters are needed still and days that are over subscribed should be highlighted accordingly.</p>
 
-<p>This the Admin Panel that your sister will see, has a coloured panel highlighting which days has enough waiters (<span style="color:'green'">green</span>), more than enough (<span style="color:'orange'">orange</span>) or not enough waiters (<span style="color:'maroon'">red</span>).
+<p>This the Admin Panel that your sister will see, has a coloured panel highlighting which days has enough waiters (<span style="color:green">green</span>), more than enough (<span style="color:'orange'">orange</span>) or not enough waiters (<span style="color:'maroon'">red</span>).
 </p>
