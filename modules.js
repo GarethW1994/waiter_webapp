@@ -33,11 +33,7 @@ module.exports = function () {
 		});
 
 		//declare the unique values
-		waiterSchema.index({
-			waiter_username: 1
-		}, {
-			unique: true
-		});
+		waiterSchema.index({waiter_username: 1}, {unique: true});
 
 		var waiters = mongoose.model('waiters', waiterSchema);
 
@@ -66,11 +62,7 @@ module.exports = function () {
 
 		})
 
-		adminSchema.index({
-			admin_surname: 1
-		}, {
-			unique: true
-		});
+		adminSchema.index({admin_surname: 1}, {unique: true});
 
 		var admin = mongoose.model('admin', adminSchema);
 
