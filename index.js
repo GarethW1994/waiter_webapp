@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 
 //declare url to mongodb
-const mongoURL = process.env.MONGO_DB_URL || "mongodb://Gareth:$gareth@ds147551.mlab.com:47551/waiter_app?authMechanism=SCRAM-SHA-1";
+const mongoURL = process.env.MONGO_DB_URL || "mongodb://Ninja:IT1994!@ds147551.mlab.com:47551/waiter_app";
 
 //Initialise Instance of express
 var app = express();
