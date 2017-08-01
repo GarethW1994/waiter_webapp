@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 
 //declare url to mongodb
-const mongoURL = process.env.MONGO_DB_URL || "mongodb://Ninja:IT1994!@ds147551.mlab.com:47551/waiter_app";
+const mongoURL = process.env.MONGO_DB_URL || "mongodb://localhost/waiter_app";
 
 //Initialise Instance of express
 var app = express();
@@ -57,7 +57,7 @@ app.get('/admin/resetData', routes.resetData);
 ////////////////////////POST ROUTES///////////////////
 app.post('/login', routes.userLogin);
 
-app.post('/sign-up', routes.newUser); 
+app.post('/sign-up', routes.newUser);
 
 app.post('/update/:username', routes.updateDays);
 
