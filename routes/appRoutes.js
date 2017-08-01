@@ -36,18 +36,18 @@ module.exports = function (waiters, admin) {
 			};
 		}).then(function (waiters) {
 			//call main function
-			let list = []; 
+			let list = [];
 			var dayMap = {}
-				
+
 			for (var i = 0; i < waiters.length; i++) {
 				if (waiters[i].waiter_days !== undefined) {
 					list.push(waiters[i].waiter_days);
-				} 
+				}
 			}
-			
+
 			var weekUpdate = daysProcess(list);
-				
-			
+
+
 			res.render('adminPanel', {
 				data: waiters,
 				week: weekUpdate
@@ -103,13 +103,13 @@ module.exports = function (waiters, admin) {
 	}
 
 	///////SAVE DATA ROUTES/////////
-	//save new user 
+	//save new user
 	const newUser = function(req, res, next) {
 		var userName = req.body.username;
 		var name = req.body.name;
 		var surname = req.body.surname;
 		var password = req.body.password;
-		
+
 		waiters({
 			waiter_username: userName,
 			waiter_name: name,
@@ -117,11 +117,11 @@ module.exports = function (waiters, admin) {
 			waiter_password: password,
 		}).save(function(result) {
 			console.log(result);
-			
+
 			res.redirect('/login');
 		});
 	}
-	
+
 	//save waiter days
 	const updateDays = function (req, res, next) {
 		//get the users days
@@ -147,7 +147,7 @@ module.exports = function (waiters, admin) {
 	const daysProcess = function (dayList) {
 
 		var dayMap = main(dayList);
-		
+
 		return dayMap;
 	}
 
@@ -155,13 +155,13 @@ module.exports = function (waiters, admin) {
 	const resetData = function(req, res) {
 		waiters.remove(function(err, result) {
 			if (err) return (err);
-			
+
 			console.log(result);
 		}).then(function() {
 			res.redirect('/days/Admin');
-		});	
+		});
 	}
-	
+
 	return {
 		//get routes
 		index,
