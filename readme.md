@@ -1,22 +1,11 @@
-<h1>Waiter Web App</h1>
+## Getting Started:
 
-<p>Your sister is running a coffee shop in town, she needs a web application to help her schedule weekly waiter shifts.</p>
+##  For Developers: Fork and Clone Repository
 
-<p>This web application allows for waiters to:</p>
+1. First get this repository on your local machine by forking it, to fork this repository click on the fork button in the upper right corner.
 
-<ul>
-	<li>login</li>
-	<li>select days they can work</li>
-	<li>update the days they can work on</li>
-</ul>
+2. Then clone the forked repository from your github account to your local machine.
 
-<p>This web application allows for your sister to:</p>
-<ul>
-	<li>see how many waiters are available to work</li>
-	<li>reset the data to use the system for a new week</li>
-</ul>
+3. Click on the clone or download button on the forked repository and copy the SSH or HTTPS link to your clipboard.
 
-<p>She need 3 waiters for each day. Days for which there are enough waiters should be marked as green, days for which more waiters are needed still and days that are over subscribed should be highlighted accordingly.</p>
-
-<p>This the Admin Panel that your sister will see, has a coloured panel highlighting which days has enough waiters (green), more than enough (orange) or not enough waiters (red).
-</p>
+4. In your terminal navigate to your projects folder and clone the repository using: `git clone link`
