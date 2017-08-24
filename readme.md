@@ -1,7 +1,7 @@
 ## Getting Started:
 1. You can view this application <a href="http://waiter-webapp.herokuapp.com/">here</a> or copy this link and paste it in your browser `http://waiter-webapp.herokuapp.com/`.
 
-2. On the welcome page You can find some more information on what the app is all about as well as link to sign up and login screens.
+2. On the welcome screen You can find some more information on what the app is all about as well as link to sign up and login screens.
 
 ##  For Developers - Fork and Clone Repository
 
