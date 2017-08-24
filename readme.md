@@ -9,7 +9,7 @@
 
 ![signup-screenshot](https://user-images.githubusercontent.com/22448019/29669142-ca62038a-88e2-11e7-8a68-74ff55dbf0a5.png)
 
-2. On the sign up screen fill out the form as indicated. Remember your Username and Password as it will be needed for when you have to login. The Username and Password can be anything that you like.
+2. On the sign up screen fill out the form as indicated. Remember your `Username` and `Password` as it will be needed for when you have to login. The Username and Password can be anything that you like.
 
 #### Setting up for Admin Account
 
