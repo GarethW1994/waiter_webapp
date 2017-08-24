@@ -9,7 +9,14 @@
 
 ![signup-screenshot](https://user-images.githubusercontent.com/22448019/29669142-ca62038a-88e2-11e7-8a68-74ff55dbf0a5.png)
 
-2. On the sign up screen fill out the form as indicated. Remember your `Username` and `Password` as it will be needed for when you have to login. The Username and Password can be anything that you like.
+2. On the sign up screen fill out the form as indicated. Remember your `Username` and `Password` as it will be needed for when you have to login. The Username and Password is can be anything.
+
+3. After successful sign up, you will be redirected to the login screen where you have to login. On this screen is where you enter your `Username` and `Password` created on the sign up screen.
+
+4. When you've successfully logged in you can now select the days that you are available to work and click on the update button. The days that you've just selected should be displayed back to you. Well Done !
+
+![selectdays-screenshot](https://user-images.githubusercontent.com/22448019/29670208-4e2b400c-88e6-11e7-8026-aa7d4bb8668f.png)
+
 
 #### Setting up for Admin Account
 
