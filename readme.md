@@ -5,6 +5,10 @@
 
 ##### Setting up for Waiters Account
 
+1. As a waiter if you not have an account created yet then you'll have to sign up by clicking on the sign up link in the navigation bar:
+
+![signup-screenshot](https://user-images.githubusercontent.com/22448019/29669142-ca62038a-88e2-11e7-8a68-74ff55dbf0a5.png) 
+
 #### Setting up for Admin Account
 
 ##  For Developers - Fork and Clone Repository
