@@ -3,6 +3,10 @@
 
 2. On the welcome screen You can find some more information on what the app is all about as well as link to sign up and login screens.
 
+##### Setting up for Waiters Account
+
+#### Setting up for Admin Account
+
 ##  For Developers - Fork and Clone Repository
 
 1. First get this repository on your local machine by forking it, to fork this repository click on the fork button in the upper right corner.
