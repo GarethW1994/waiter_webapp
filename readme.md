@@ -11,6 +11,6 @@
 
 - Managers can also reset the data for a starting of a new week.
 
-####Demo
+### Demo
 
 See Live Demo: <a href="https://waiter-webapp.herokuapp.com/">Waiter App</a>
