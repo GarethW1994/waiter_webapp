@@ -57,7 +57,7 @@
 ##### NodeJS
 1. To check if you have NodeJS installed on your local machine run this command in the terminal - `node -v`
 
-2. If this command fails, install Nodejs on your machine - <a href="">NodeJS Installation</a>
+2. If this command fails, install Nodejs on your machine - <a href="">NodeJS Installatio</a>
 
 ---
 
