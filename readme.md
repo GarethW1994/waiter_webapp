@@ -3,7 +3,7 @@
 
 - Managers can sign-up and login to see an admin dashboard that will display on which days waiters are available to work. These days will be coloured accordingly:
 
-- ![#f03c15](Green) - For days there's enough waiters scheduled.
+- <span style="color:green">Green</span> - For days there's enough waiters scheduled.
 - Orange - For days where there are not enough waiters scheduled.
 - Red - For days that there are too much waiters scheduled.
 
