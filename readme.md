@@ -19,6 +19,11 @@
 
 
 #### Setting up for Admin Account
+1. An Admin Account has already been created so on login screen enter `Admin` as Username and `$admin` as the password to log in to view the admin dashboard.
+   Alternatively you can create your own admin account but the username has to be `Admin` but the password can be anything that you like.
+2. You can now log in with your login credentials.
+3. In the admin dashboard you can see the waiter data and on what days they're available to work.
+4. You can reset this data by clicking on the `reset` link in the menu bar on the top of the page.
 
 ##  For Developers - Fork and Clone Repository
 
