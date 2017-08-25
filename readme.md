@@ -1,7 +1,7 @@
 ## About Waiter App
-- This waiter app allows managers to keep track of waiters' weekly work days schedule.
+- This Waiter App allows managers to keep track of waiters' weekly work days schedule.
 
-- Managers can sign-up and login to see an admin dashboard that will display on which days waiters are available to work. These days will be coloured accordingly:
+- Managers can sign-up and login to see an Admin dashboard that will display on which days waiters are available to work. These days will be colored accordingly:
 
 - Green - For days there's enough waiters scheduled.
 - Orange - For days where there are not enough waiters scheduled.
