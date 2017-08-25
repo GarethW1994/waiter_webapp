@@ -1,3 +1,5 @@
+See <a href="https://github.com/GarethW1994/waiter_webapp/tree/about">About</a>
+
 ## Getting Started:
 1. You can view this application <a href="http://waiter-webapp.herokuapp.com/">here</a> or copy this link and paste it in your browser `http://waiter-webapp.herokuapp.com/`.
 
