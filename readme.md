@@ -75,7 +75,10 @@ See <a href="https://github.com/GarethW1994/waiter_webapp/tree/about">About</a>
 ##### MongoDB
 1. Install <a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-mongodb-on-ubuntu-16-04"> MongoDB</a> (Note that this is for ubuntu-16-04    distributions)
 
-2. After mongodb is set up go to your terminal and run `mongod` command. This will start-up and run the mongo server.
+2. After mongodb is set up go to your terminal and run `mongod` command. This will start-up and run the mongo server. To verify that the mongo process is running run the following command:
+ ```
+ ps -ef | grep mongo
+ ```
 
 3. In a new terminal window or tab, run the following command `mongo`, this command will open MongoDB's shell. You should be seeing something like this:
 
