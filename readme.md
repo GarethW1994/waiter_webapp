@@ -75,21 +75,28 @@ See <a href="https://github.com/GarethW1994/waiter_webapp/tree/about">About</a>
 ##### MongoDB
 1. Install <a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-mongodb-on-ubuntu-16-04"> MongoDB</a> (Note that this is for ubuntu-16-04    distributions)
 
-1. Go to your <mongodb installation dir>:
+2. After mongodb is set up go to your terminal and run `mongod` command. This will start-up and run the mongo server.
 
+3. In a new terminal window or tab, run the following command `mongo`, this command will open MongoDB's shell. You should be seeing something like this:
+
+  ![mongo-screenshot](https://user-images.githubusercontent.com/22448019/29771337-85aec57a-8bf3-11e7-80be-2ceb18da26f8.png)
+
+4. Now we can view all our databases in mongo by using the command `show dbs`. We can now locate and see our waiter_app database.
+
+  ![show-dbs](https://user-images.githubusercontent.com/22448019/29771899-58131884-8bf6-11e7-9399-231e7601fba7.png)
+
+5. You can open that database by entering `use waiter_app` command.
+
+6. To view what the collections that are in this database use `show collections` command. You should now be seeing a collection called *admins* and *waiters*.
+
+![collections-api](https://user-images.githubusercontent.com/22448019/29772256-3d10f7d4-8bf8-11e7-8b71-b89afe7c3c97.png)
+
+7. To find all the waiters within this collection use the following command:
 ```
-cd <mongodb installation dir>
+db.waiters.find({});
 ```
 
-2. Type ./bin/mongo to start mongo:
-
-```
-./bin/mongo
-```
-
-3. If you have added the <mongodb installation dir>/bin to the PATH environment variable, you can just type mongo instead of ./bin/mongo.
-
-- After mongodb is set up and running the app will save all data in a database called `reg_numbers`.
+8. Running the app will save all data in a database called `waiter_app`.
 
 ---
 
