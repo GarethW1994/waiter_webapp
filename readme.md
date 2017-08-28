@@ -74,6 +74,21 @@ See <a href="https://github.com/GarethW1994/waiter_webapp/tree/about">About</a>
 
 ##### MongoDB
 1. Install <a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-mongodb-on-ubuntu-16-04"> MongoDB</a> (Note that this is for ubuntu-16-04    distributions)
+
+1. Go to your <mongodb installation dir>:
+
+```
+cd <mongodb installation dir>
+```
+
+2. Type ./bin/mongo to start mongo:
+
+```
+./bin/mongo
+```
+
+3. If you have added the <mongodb installation dir>/bin to the PATH environment variable, you can just type mongo instead of ./bin/mongo.
+
 - After mongodb is set up and running the app will save all data in a database called `reg_numbers`.
 
 ---
