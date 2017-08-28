@@ -99,7 +99,12 @@ See <a href="https://github.com/GarethW1994/waiter_webapp/tree/about">About</a>
 db.waiters.find({});
 ```
 
-8. Running the app will save all data in a database called `waiter_app`.
+8. To add a new waiter to the database you can run the following command:
+```
+db.waiters.insert({waiter_username: 'JohnR', waiter_name: 'John', waiter_surname: 'Russ', waiter_password: 'jr@123'});
+``` 
+
+9. Running the app will save all data in a database called `waiter_app`.
 
 ---
 
