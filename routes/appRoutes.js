@@ -3,7 +3,7 @@
 //require main.js
 var main = require('../main');
 
-module.exports = function (waiters, admin) {
+module.exports = function (Models) {
 	//declare days
 	var daysArr = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
@@ -30,7 +30,7 @@ module.exports = function (waiters, admin) {
 	}
 
 	const adminDashboard = function (req, res) {
-		waiters.find({}, function (err, data) {
+		Models.waiters.find({}, function (err, data) {
 			if (err) {
 				console.log(err)
 			};
@@ -62,9 +62,9 @@ module.exports = function (waiters, admin) {
 		var username = req.body.username;
 		var password = req.body.password;
 
-		if (username === 'Admin') {
+		if (username === 'Admin' || username === 'admin') {
 			//find the admin
-			admin.find({
+			Models.admin.find({
 				admin_username: username
 			}, function (err, user) {
 				if (err) {
@@ -83,7 +83,7 @@ module.exports = function (waiters, admin) {
 
 		} else {
 			//find the user
-			waiters.find({
+			Models.waiters.find({
 				waiter_username: username
 			}, function (err, user) {
 				if (err) {
@@ -110,16 +110,29 @@ module.exports = function (waiters, admin) {
 		var surname = req.body.surname;
 		var password = req.body.password;
 
-		waiters({
-			waiter_username: userName,
-			waiter_name: name,
-			waiter_surname: surname,
-			waiter_password: password,
-		}).save(function(result) {
-			console.log(result);
+		if (userName === 'Admin' || userName === 'admin') {
+			Models.admin({
+				admin_username: userName,
+				admin_name: name,
+				admin_surname: surname,
+				admin_password: password,
+			}).save(function(result) {
+				console.log(result);
 
-			res.redirect('/login');
-		});
+				res.redirect('/login');
+			});
+		} else {
+			Models.waiters({
+				waiter_username: userName,
+				waiter_name: name,
+				waiter_surname: surname,
+				waiter_password: password,
+			}).save(function(result) {
+				console.log(result);
+
+				res.redirect('/login');
+			});
+		}
 	}
 
 	//save waiter days
@@ -128,7 +141,7 @@ module.exports = function (waiters, admin) {
 		var getDays = req.body.days;
 		var user = req.params.username;
 
-		waiters.update({
+		Models.waiters.update({
 			waiter_username: user
 		}, {
 			waiter_days: getDays
@@ -153,7 +166,7 @@ module.exports = function (waiters, admin) {
 
 	//reset data (Delete users)
 	const resetData = function(req, res) {
-		waiters.remove(function(err, result) {
+		Models.waiters.remove(function(err, result) {
 			if (err) return (err);
 
 			console.log(result);

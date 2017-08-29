@@ -1,13 +1,14 @@
 //require mongoose
 var mongoose = require('mongoose');
-var assert = require('assert');
 
-module.exports = function () {
+module.exports = function (url) {
+	//connect to database
+	mongoose.connect(url);
 
 	// Use native promises
 		 mongoose.Promise = global.Promise;
 
-	const waiterData = function () {
+		 //waiter Schema
 		const waiterSchema = new mongoose.Schema({
 			waiter_username: {
 				type: String,
@@ -37,10 +38,7 @@ module.exports = function () {
 
 		var waiters = mongoose.model('waiters', waiterSchema);
 
-		return waiters;
-	}
-
-	const adminData = function () {
+		///Admin Schema
 		const adminSchema = new mongoose.Schema({
 			admin_username: {
 				type: String,
@@ -65,11 +63,8 @@ module.exports = function () {
 
 		var admin = mongoose.model('admin', adminSchema);
 
-		return admin;
-	}
-
 	return {
-		waiterData,
-		adminData
+		waiters,
+		admin
 	};
 }

@@ -1,17 +1,15 @@
 //require assert
 const assert = require('assert');
 const models = require('../modules');
-const databaseConnection = require('../connectDatabase');
+
 //connect to MongoDB
-var connection = databaseConnection('mongodb://127.0.0.1/waiter_app');
-var waiterSchema = models().waiterData;
-var waiters = waiterSchema();
+var Models = models('mongodb://127.0.0.1/waiter_app');
 
 describe('store waiters', function() {
    //before it fuction run clear the Database
     beforeEach(function(done) {
-        waiters.find({}, function(err) {
-            waiters.remove({}, function(err) {
+        Models.waiters.find({}, function(err) {
+            Models.waiters.remove({}, function(err) {
                 done(err);
             });
         });
@@ -26,8 +24,8 @@ describe('store waiters', function() {
                 };
 
 
-            waiters.create(newWaiter, function(err) {
-                waiters.find({}, function(err, results){
+            Models.waiters.create(newWaiter, function(err) {
+                Models.waiters.find({}, function(err, results){
                   assert.equal(1, results.length);
                   done(err);
                 });

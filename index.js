@@ -24,20 +24,14 @@ app.use(express.static('public'));
 
 
 //call external function
-var databaseConnection = require('./connectDatabase');
 var models = require('./modules');
 var appRoutes = require('./routes/appRoutes');
 
-//connect to database
-var connection = databaseConnection(mongoURL);
-
 //save schema models
-var waiterSchema = models().waiterData;
-var adminSchema = models().adminData;
+var Models = models(mongoURL);
 
 //call routes function
-var routes = appRoutes(waiterSchema(), adminSchema());
-
+var routes = appRoutes(Models);
 
 ////////////////////GET ROUTES///////////////////////////
 app.get('/', routes.index);
