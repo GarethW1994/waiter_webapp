@@ -3,7 +3,7 @@ const assert = require('assert');
 const models = require('../modules');
 const databaseConnection = require('../connectDatabase');
 //connect to MongoDB
-var connection = databaseConnection('mongodb://Ninja:IT1994!@ds147551.mlab.com:47551/waiter_app');
+var connection = databaseConnection('mongodb://127.0.0.1/waiter_app');
 var waiterSchema = models().waiterData;
 var waiters = waiterSchema();
 
