@@ -39,6 +39,8 @@ app.get('/', routes.index);
 //login route
 app.get('/login', routes.login);
 
+//ACCESS_DENIED
+app.get('/access_denied', routes.accessDenied);
 //sign-up route
 app.get('/sign-up', routes.signUp);
 

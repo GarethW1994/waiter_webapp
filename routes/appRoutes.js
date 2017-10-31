@@ -29,6 +29,14 @@ module.exports = function (Models) {
 		});
 	}
 
+	const accessDenied = function(req, res) {
+		res.send('ACCESS_DENIED');
+	}
+
+	const logout = function(req, res) {
+		res.redirect('/login');
+	}
+
 	const adminDashboard = function (req, res) {
 		Models.waiters.find({}, function (err, data) {
 			if (err) {
@@ -61,6 +69,8 @@ module.exports = function (Models) {
 		//get the user name from form
 		var username = req.body.username;
 		var password = req.body.password;
+
+		console.log(username);
 
 		if (username === 'Admin' || username === 'admin') {
 			//find the admin
@@ -180,6 +190,7 @@ module.exports = function (Models) {
 		index,
 		login,
 		signUp,
+		accessDenied,
 		loggedIn,
 		adminDashboard,
 		resetData,
